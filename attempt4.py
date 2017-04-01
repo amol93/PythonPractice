@@ -17,15 +17,15 @@ for i in range(0,len(x)):
       #print(x[i])
       d=str(y[i])
       a.append(d)
-      print(a)
+      #print(a)
       for b in x:
         if b != x[i] and b!=x[i+1]:
-          print(b)
+          #print(b)
           a.append(str(b))
       #print(a)
       h="".join(a)
       
-      print(h)
+     # print(h)
       l.append(h)
       a=[]
       #print(l)
@@ -37,7 +37,7 @@ for i in range(0,len(x)):
       d=str(y[i])
       for b in x:
         if b != x[i] and b!=x[i+1]:
-          print(b)
+          #print(b)
           a.append(str(b))
           
       a.insert(i,d)
