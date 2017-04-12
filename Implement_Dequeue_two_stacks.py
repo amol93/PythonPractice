@@ -6,7 +6,7 @@ x,y,z=[],[],[]
 s1= Stack()
 s2= Stack()
 s3= Stack()									#It is used for intermediate / temporary stack 
-n=int(input())
+n=int(input())								#Input number 
 for i in range(n):
   s1.push(i)
   print(i,'pushed in s1')
@@ -16,9 +16,9 @@ for i in range(n):
       print(s3.peek(),'Pushed into s3')
     s2.push(s1.pop())
     print(s2.peek(),'pushed in s2')
-    while s2.isEmpty() == False:
-      s3.push(s2.pop())
-      print(s3.peek() ,'pushed in s3')
+    # while s2.isEmpty() == False:        Unnecessary logic, output comes out to be same 
+    #   s3.push(s2.pop())
+    #   print(s3.peek() ,'pushed in s3')
     while s3.isEmpty()==False:
       s2.push(s3.pop())
       print(s2.peek(),'pushed from s3 to s2')
@@ -48,6 +48,8 @@ for i in range(10):				#printing s3
 
 print(z,'numbers in s3') # since used as a temporary stack, it remains empty
 
+
+#Input n = 10 
 #Output
 # in s1 =[9]
 # in s2 = [0,1,2,3,4,5,6,7,8]
