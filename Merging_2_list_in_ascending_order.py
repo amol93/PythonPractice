@@ -57,4 +57,6 @@ for j in range(len(a)):
     
 print(a)
 
+# i/p
+# o/p 
 
