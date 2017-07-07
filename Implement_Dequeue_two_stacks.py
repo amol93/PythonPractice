@@ -6,7 +6,10 @@ x,y,z=[],[],[]
 s1= Stack()
 s2= Stack()
 s3= Stack()									#It is used for intermediate / temporary stack 
+o = int(input())        # number of operations to be carried out on the given Dequeue functionality
 n=int(input())								#Input number 
+
+
 for i in range(n):
   s1.push(i)
   print(i,'pushed in s1')
@@ -23,7 +26,10 @@ for i in range(n):
       s2.push(s3.pop())
       print(s2.peek(),'pushed from s3 to s2')
       
-
+for i in range(o):
+    print("1 - Add to Rear \t 2 - Add to front \t 3 - Remove from front \t 4 - Remove from Rear")
+    x = int(input())
+    if x ==1:
   
 # print(s1.peek())
 # print(s3.isEmpty())
