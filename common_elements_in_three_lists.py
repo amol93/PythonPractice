@@ -1,31 +1,38 @@
 #Find common elements in three sorted arrays/ lists
 
-a=[]
-for i in range(int(input("Input the number for elements in the first list \n"))):
-  a.append(int(input()))
-  
-v=[]
-for i in range(int(input("Input the number for elements in the second list \n"))):
-  v.append(int(input()))
-  
-c=[]
-for i in range(int(input("Input the number for elements in the third list \n"))):
-  c.append(int(input()))
-  
-print(a,v,c)
-d=[]
-for i in range(max(len(a),len(v),len(c))):
-  if max(len(a),len(v),len(c)) == len(a):
-    if a[i] in v and c:
-      d.append(a[i])
-  if max(len(a),len(v),len(c)) == len(c):
-    if c[i] in a and v:
-      d.append(c[i])
-  if max(len(a),len(v),len(c)) == len(v):
-    if v[i] in a and c:
-      d.append(v[i])
+def sortThreeLists (a,v,c):
+  d=[]
+  for i in range(max(len(a),len(v),len(c))):
+    if max(len(a),len(v),len(c)) == len(a):
+      if a[i] in v and c:
+        d.append(a[i])
+    elif max(len(a),len(v),len(c)) == len(c):
+      if c[i] in a and v:
+        d.append(c[i])
+    elif max(len(a),len(v),len(c)) == len(v):
+      if v[i] in a and c:
+        d.append(v[i])
+	else:
+		continue
 
-print(d)
+  return d
+
+
+r=[]
+for i in range(int(input("Input the number for elements in the list \n"))):
+  r.append(int(input()))
+  
+s=[]
+for i in range(int(input("Input the number for elements in the list \n"))):
+  s.append(int(input()))
+  
+t=[]
+for i in range(int(input("Input the number for elements in the list \n"))):
+  t.append(int(input()))
+
+l=[]
+l=sortThreeLists(r,s,t)
+print(l)
 
 
 #Input the number for elements in the first list 
