@@ -2,6 +2,12 @@
 
 #Output: [ 33456, 15456, 12756, 12396 , 123411 ]
 
+# Perfect for Non repeating numbers
+#Will give error for the first element if second and third element are repeating numbers 
+
+#Input 11111
+#Suppposed Output - ['2111', '1211', '1121', '1112'] 
+#Output Obtained - ['2', '1211', '1121', '1112'] - BUG
 x= input()
 #print(x)
 
