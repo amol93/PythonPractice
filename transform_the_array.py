@@ -6,8 +6,10 @@
 #Input 2 4 5 0 0 5 4 8 6 0 6 8
 #Output 2 4 10 4 8 12 8 0 0 0 0 0 
 
-#Code question from http://practice.geeksforgeeks.org/problems/transform-the-array/0
 
+#Eg3 
+# input 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 3, 1
+# output 2 2 6 1 0 0 0 0 0 0 0 0 0 0 0 
 
 x= int(input("number of test cases"))
 y= int(input("An integer"))
@@ -17,21 +19,15 @@ for i in range(y):
 print(a)
 
 for i in range(len(a)):
-  if i+1 < len(a):
-  #print(a[i],'first for loop')
-    if a[i]==0 and a[i+1]==0:
-      #print([i])
-      a.pop(i+1)
-      a.append(0)
-      a.pop(i)
-      a.append(0)
-  
-  if a[i]==0:
-    #print([i])
-    a.pop(i)
+  if a[i]!=0:
+    continue
+  else:
+    #print(i)
+    a.remove(a[i])
     a.append(0)
     
-#print("appending 0 at the end- ",a)
+    
+print("appending 0 at the end- ",a)
 for i in range(len(a)):
   if i+1<len(a):
     if a[i]==a[i+1]:
@@ -47,6 +43,3 @@ for i in range(len(a)):
       a.pop(i)
 
 print(a)
-    
-  
-    
